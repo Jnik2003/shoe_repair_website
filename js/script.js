@@ -267,8 +267,9 @@ let date = new Date();
 let day;
 //let day = date.getDay();
 console.log(date.getDay());
-let hour = date.getHours();
 
+let hour = date.getHours();
+console.log(hour);
 
 if(date.getDay() == 0){
 	day = 6;
@@ -282,7 +283,7 @@ let addrs = document.querySelectorAll('.dot_item');
 addrs[day].style.animation = 'dotzoom 2s infinite';
 
 
-if(day == 5 || day ==6 && hour <10 || hour >= 18){
+if(day == 5 || day ==6 || hour <10 || hour >= 18){
 		addrs[day].style.backgroundColor = 'red';
 	}	
 else{
