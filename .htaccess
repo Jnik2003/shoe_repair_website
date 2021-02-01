@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+ErrorDocument 404 /404
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ template/gallery.php?route=$1 [L] 
+RewriteRule ^(.*)$ index.php?route=$1 [L] 
+# Все , что пойдет после слэша попадет в #переменную route (см. index.php строка 3)
