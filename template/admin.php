@@ -27,20 +27,30 @@ $out .= '</div></div>';
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<title>Gutalinas</title>
 
 </head>
 <body>
-	<h1>Админ панель</h1>
+
+	<div class="wrap wrap_admin">
+		<h2>Админ панель</h2>
+		<div class="wrap_admin_links">
+			<div><a class="admin_links" href="/admin/create">Создать</a></div>
+		<div><a class="admin_links" href="/logout">Выход</a></div>
+		</div>
+		
+	</div>
 	
-<?php require_once "modal.php";?>
+	
+
 
 <!-- -->
-<div><a href="/admin/create">Создать</a></div>
-<div><a href="/logout">Выход</a></div>
+
+<?php require "modal.php";?>
 <script src="js/open_modal.js"></script>
 </body>
-
+</html>
 <?php
 echo $out;
 ?>

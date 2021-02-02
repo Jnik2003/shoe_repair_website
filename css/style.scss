@@ -225,11 +225,8 @@ justify-self: end;
 	position: fixed;
 	z-index: 9999;
 	display: inline-block;
-	
-
-	
-}
-.wrap_menu{
+		
+	.wrap_menu{
 	max-width: 1170px;
 	//width: inherit;	
 	height: $menu_height;
@@ -245,6 +242,11 @@ justify-self: end;
 	
 }
 
+	
+}
+
+
+
 .menu_box{	
 		width: 100%;
 		height: 100%;
@@ -257,6 +259,7 @@ justify-self: end;
 		text-decoration: none;
 		color: $textColorLight;
 		justify-content: center;
+		;
 	// a{
 	// 	margin: 0 auto;		
 	// 	text-decoration: none;
@@ -998,7 +1001,10 @@ $primaryColor: #4A90E2;
 .gallery_wrap{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	grid-gap: 15px;
+	grid-column-gap: 45px;
+	//grid-gap:45px;
+	//grid-row-gap: 25px;
+	
 	justify-items: center;
 	align-items: center;
 	.gallery_img{
@@ -1021,6 +1027,10 @@ $primaryColor: #4A90E2;
 		p{
 			// color: black;
 			text-align: center;
+			height: 45px;
+			max-width: 300px;
+			word-break: break-all;
+			font-size: 14px;
 		}
 	}
 }
@@ -1041,7 +1051,7 @@ $primaryColor: #4A90E2;
 						color:$textColorTitleLight;
 					}
 					a:nth-last-child(1){
-						color: $accentColor;
+						color: #E7AA7C;
 					}
 					
 				}
@@ -1151,7 +1161,17 @@ span.close:hover {
 	input, textarea, select{
 		display: block;
 		margin-bottom: 10px;
+		width: 300px;
+		height: 30px;
 		
+	}
+	textarea{
+		height: 100px;
+	}
+	.btn{
+		width: 300px;
+		height: 40px;
+		font-size: 18px;
 	}
 }
 // 
@@ -1202,6 +1222,57 @@ span.close:hover {
 .page_content{
 	padding-top: 20px;
 }
+
+// форма регистрация
+
+.admin_form{
+	width: 100%;
+	height: 100vh;
+	.admin_form_register{
+		max-width: 500px;
+		width: 100%;		
+		margin:15% auto;
+		padding: 50px;
+		border: 3px solid $accentColor;
+
+			h2{
+				text-align: center;
+			}
+			form{
+				margin:0 auto;
+				input{
+					width: 300px;
+					height: 30px;
+					margin-bottom: 10px;
+				}
+			}
+			.admin_form_link{
+				
+				color: red;
+			}
+	}
+}
+// Админ панель
+
+.wrap_admin{
+	height: 170px;
+	.wrap_admin_links{
+		display: flex;
+	}
+	
+	.admin_links{
+		color: black;
+		font-size: 22px;
+		margin: 10px;
+		border: 2px solid red;
+		padding: 10px;
+	}
+	.admin_links:hover{
+		background-color: lime;
+	}
+}
+
+
 
 // ======Адаптивность=======
 @media all and (max-width: 1200px){

@@ -4,11 +4,11 @@ if (!getUser()){
 // 	if (headers_sent()) {
 //     var_dump(headers_list());
 // } 
-	//header('Location: /login');
+	header('Location: /login');
 	//echo "no user";	
 }
-echo "<h2>Добавить фото</h2>";
-echo "<a href='/admin'>Выход в админ панель</a>";
+//echo "<h2>Добавить фото</h2>";
+//echo "<a href='/admin'>Выход в админ панель</a>";
 //var_dump($_POST);
 if(isset($_POST['submit'])){
 
@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
 	
 	
 	//$image = $_FILES['image']['name'];
-	
+	// поменяем размер загруженной фотографии
 	imgResize('img/gallery/'.$nextId.$_FILES['image']['name']);
 
 
@@ -69,31 +69,39 @@ if(isset($_POST['submit'])){
 ?>
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="lt">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href=".././css/style.css">
-	<title>Добавить фото</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<title>Gutalinas</title>
 </head>
 <body>
+	<div class="wrap wrap_admin">
+		<h2>Добавить фото</h2>
+		<div class="wrap_admin_links">
+		
+		<div><a class="admin_links" href='/admin'>Выход в админ панель</a></div>
+		</div>
 	
-	<div class="wrap">
+	<div class="wrap wrap_create">
 		<form action="" method="POST" enctype="multipart/form-data" class="form_add">
 	Категория:<?php include "form_create.php"; ?>
-	<textarea name="description" placeholder="Описание" cols=35 rows=5></textarea>
+	<textarea name="description" placeholder="Описание максимум 55 символов" cols=35 rows=5 maxlength="55"></textarea>
 	
-	Выберите фото: <input type="file" name="image">	
+	Выберите фото: <input class="btn" type="file" name="image">	
 	
-	<button type="submit" name="submit">Добавить</button>
-
+	<button class="btn" type="submit" name="submit">Добавить</button>
 </form>
-	</div>
-
 <?php
 echo $out;
 echo $res;
-?>
+?>		
+	</div>
+</div>
+
+
 </body>
 </html>
 

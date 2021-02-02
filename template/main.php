@@ -5,22 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Gutalinas</title>
-	<meta name="description" content="Проектирование монтаж обслуживание охранно-пожарных сигнализаций, видеонаблюдения, контроля доступа. Качественно, с гарантией">
+	<meta name="description" content="Batų taisymas, batų priežiūra, batų dažymas, peilių galandimas, odos tvarkymas">
 			
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 	<meta http-equiv="Cache-Control" content="no-cache">
 
-	<meta name="keywords" content="пожарная сигнализация, видеонаблюдение, проектирование, контроль доступа, монтаж обслуживание">
+	<meta name="keywords" content="remontas, batai, oda, dirbtuvės">	
 
-	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div  id="Pradžia"></div>

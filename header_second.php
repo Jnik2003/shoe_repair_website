@@ -1,16 +1,12 @@
 <div class="menu">
 		<!-- <div class="wrap"> -->
-		<div class="wrap_menu">
+		<div class="wrap_menu header_second">
 			<a href="index.php" class="menu_box">Pradžia</a>
 			
-			<a href="#Paslaugos" class="menu_box">Paslaugos</a>
-
-			<a href="#xxx" class="menu_box">Apie&nbsp;mus</a>
-
-			<a href="#zzz" class="menu_box">Atsiliepimai</a>
+			<a href="#Aukštyn" class="menu_box">Aukštyn</a>	
 
 			<a href="gallery" class="menu_box">Fotogalerija</a>
-			<a href="" class="menu_box">Kontaktai</a>
+		
 
 		</div>		
 	<!-- </div> -->
@@ -30,12 +26,10 @@
 		</div>
 
 		<div class="wrap_mobile_menu">
-			<a href=""  class="menu_box">Pradžia</a>
-			<a href="" class="menu_box">Paslaugos</a>
-			<a href="" class="menu_box">Apie mus</a>
-			<a href="" class="menu_box">Atsiliepimai</a>
-			<a href="gallery" class="menu_box">Fotogalerija</a>
-			<a href="" class="menu_box">Kontaktai</a>
+			<a href="index.php"  class="menu_box">Pradžia</a>
+			<a href="#Aukštyn" class="menu_box">Aukštyn</a>	
+			<a href="gallery" class="menu_box">Fotogalerija</a>		
+			
 		</div>		
 	</div>
 

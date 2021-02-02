@@ -162,5 +162,17 @@ function fileDel($fname){
 	}
     //if(file_exists($img) == FALSE) echo $img." файл удален";  
 }
+function stopRegister(){
+	$query = "SELECT * FROM `users` WHERE 1";
+	$result = select($query);
+	
+	if($result){
+		return true;
+	}
+	else{
+		return false;
+	}
+
+}
 
 ?>

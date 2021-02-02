@@ -24,30 +24,11 @@ if($route[0] == ""){
 	require_once 'template/main.php'; // подключаем страницу с выводом на нее
 }
 elseif($route[0] == "gallery" && !isset($route[1])){
-	// пагинация
-	// $page = 1; // текущая страница
-	// $kol = 5;// количество записей для вывода
-	// //$art = ($page * $kol) - $kol;// с какой записи выводить
-
-	// $art = $route[1];
-	// // Определяем все количество записей в таблице
-	// $query = "SELECT COUNT(*) FROM `info`";
-	// $res = select($query);	
-	// $row = call_user_func_array('array_merge', $res);
 	
-	// $total = $row["COUNT(*)"]; // всего записей	
-	
-	// // Количество страниц для пагинации
-	// $str_pag = ceil($total / $kol);
-	
-	// // формируем пагинацию
-	// for ($i = 1; $i <= $str_pag; $i++){
-	// 	echo "<a href=gallery/".$i."> Страница ".$i." </a>";
-	// }	
-	// $query  = "select * from info LIMIT $art, $kol";	
 
 	$query  = "select * from info";
-	 $result = select($query); 	 
+	 $result = select($query);
+	 rsort($result); 	 
 	require_once "template/gallery.php"; // подключаем страницу с выводом на нее
 }
 // страница категорий
@@ -92,7 +73,8 @@ elseif($route[0] == 'admin' && $route[1] === 'delete' && isset($route[2])){
         	exit;
         }
         $query = 'SELECT * FROM info';
-        $result = select($query);   	
+        $result = select($query); 
+        rsort($result);   	
     	require_once 'template/admin.php';
 }
 
@@ -103,7 +85,8 @@ elseif($route[0] == 'admin' && $route[1] === 'create' && !isset($route[2])){
 
 elseif($route[0] == "admin" && !isset($route[1])){
 	$query = 'SELECT * FROM info';
-    $result = select($query);	
+    $result = select($query);
+    rsort($result); 	
 	require_once "template/admin.php"; 
 
 }

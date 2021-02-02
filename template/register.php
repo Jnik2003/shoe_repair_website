@@ -20,6 +20,9 @@ if(isset($_POST['submit'])){
 	if(isLoginExist($_POST['login'])){
 		$err[] = "Такой пользователь уже существует";
 	}
+	if(stopRegister() == true){
+		$err[] = "Регистрация запрещена";
+	}
 	//запрос на добавление в БД users если в массиве ошибок ничего нет
 	if(count($err) === 0){
 		createUser($_POST['login'], $_POST['password']);
@@ -39,12 +42,30 @@ if(isset($_POST['submit'])){
 	
 
 ?>
-<h2>Регистрация</h2>
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<title>Gutalinas</title>
+</head>
+<body>
+<div class="admin_form">
+	<div class="admin_form_register">
+		<h2>Регистрация</h2>
 <form method="POST">
-	Логин: <input type="text" name="login" required=""><br>
-	Пароль: <input type="text" name="password" required=""><br>
+	<input type="text" name="login" required="" placeholder="Логин"><br>
+	<input type="text" name="password" required="" placeholder="Пароль"><br>
 	<input type="submit" name="submit" id="" value="Регистрация">
 
 </form>
-<a href="login">Авторизация</a>
+<a class="admin_form_link" href="login">Авторизация</a>
 <br>
+	</div>
+	
+</div>
+
+</body>
+</html>
