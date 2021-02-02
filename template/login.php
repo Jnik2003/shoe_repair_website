@@ -42,7 +42,7 @@ else{
 		<h2>Авторизация</h2>
 <form method="POST">
 	<input type="text" name="login" required="" placeholder="Логин"><br>
-	<input type="text" name="password" required="" placeholder="Пароль"><br>
+	<input type="password" name="password" required="" placeholder="Пароль"><br>
 	<input type="submit" name="submit" id="" value="Войти">
 
 </form>

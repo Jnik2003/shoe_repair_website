@@ -3,7 +3,7 @@
 
 if (!getUser()){
 	header('Location: /login');
-	echo "no user";
+	//echo "no user";
 	
 }
 $out = "<div class = 'wrap'>";
@@ -36,8 +36,9 @@ $out .= '</div></div>';
 	<div class="wrap wrap_admin">
 		<h2>Админ панель</h2>
 		<div class="wrap_admin_links">
-			<div><a class="admin_links" href="/admin/create">Создать</a></div>
-		<div><a class="admin_links" href="/logout">Выход</a></div>
+			<div><a class="admin_links" href="/admin/create">Создать</a></div>		
+			<div><a class="admin_links" href="/gallery">В галерею</a></div>
+				<div><a class="admin_links" href="/logout">Выход</a></div>
 		</div>
 		
 	</div>
