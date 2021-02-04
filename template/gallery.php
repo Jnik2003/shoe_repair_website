@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<title>Gutalinas</title>
+	
+	<title>Avalynės taisykla Gutalinas</title>
 	<meta name="description" content="Batų taisymas, batų priežiūra, batų dažymas, peilių galandimas, odos tvarkymas">
 			
 	
@@ -34,7 +34,7 @@
 			</div>
 			
 			<div class="wrap_subtitle">
-				<p class="links">Geras darbas vertas fotografijos</p>
+				<p class="links">Geras darbas vertas&nbsp;fotografijos</p>
 			</div>
 			
 		</div>

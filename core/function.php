@@ -175,4 +175,10 @@ function stopRegister(){
 
 }
 
+function spam(){
+	$query = "INSERT INTO spam (`ip`) VALUES ('spam')";
+	
+	execQuery($query);
+}
+
 ?>

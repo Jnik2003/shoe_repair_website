@@ -1,0 +1,25 @@
+.wrap{
+	
+	height: 100vh;
+	background-image: url("/img/404/404.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.page404{
+	width: 100%;
+}
+.homepage{
+	width: 250px;
+	height: 60px;
+	cursor: pointer;
+	margin: 35% 0 0 26%;
+	border: none;
+	font-size: 24px;
+	background-color: #7C460A;
+	color: white;
+	transition: .3s;
+}
+.homepage:hover{
+	background-color: #71798E;
+}

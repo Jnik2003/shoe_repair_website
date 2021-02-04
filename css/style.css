@@ -8,6 +8,8 @@ h2 {
   font-family: "Vollkorn", serif;
   font-size: calc(30px + 10 * ((100vw - 320px) / 850));
   margin-top: 0;
+  color: #FAFAFA;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -19,6 +21,7 @@ h3 {
 li {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+  color: #FAFAFA;
 }
 
 p {
@@ -31,9 +34,19 @@ p {
   letter-spacing: 0.05em;
 }
 
+span {
+  color: #FAFAFA;
+  font-family: "Open Sans", sans-serif;
+}
+
 input {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
+}
+
+label {
+  color: #FAFAFA;
+  font-family: "Open Sans", sans-serif;
 }
 
 body, html {
@@ -129,7 +142,7 @@ input[type=number] {
 }
 .header .wrap .wrap_header .header_logo h2 {
   color: #FAFAFA;
-  margin-bottom: 0;
+  margin-bottom: -15px;
 }
 .header .wrap .wrap_header .header_info .info_location, .header .wrap .wrap_header .header_info .contacts_phone, .header .wrap .wrap_header .header_info .contacts_mail, .header .wrap .wrap_header .header_contacts .info_location, .header .wrap .wrap_header .header_contacts .contacts_phone, .header .wrap .wrap_header .header_contacts .contacts_mail, .header .wrap .wrap_header .contacts_mail .info_location, .header .wrap .wrap_header .contacts_mail .contacts_phone, .header .wrap .wrap_header .contacts_mail .contacts_mail {
   display: flex;
@@ -224,40 +237,71 @@ input[type=number] {
   color: white;
 }
 
-.mobile_menu_logo {
-  max-width: 150px;
-  height: 50px;
-}
-
 .wrap_mobile_menu {
   position: absolute;
-  background-color: #000000;
-  padding: 10px 10px 10px 10px;
+  background-color: #341B00;
+  padding: 10px 10px 20px 10px;
   width: 70%;
-  height: 0;
-  opacity: 0;
-  transition: 0.3s;
+  height: 70vh;
+  display: none;
 }
 .wrap_mobile_menu a {
-  width: 100%;
   height: 10%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-
-.menu_visible {
-  opacity: 1;
-  height: 70vh;
+.wrap_mobile_menu .delimiter {
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
+}
+.wrap_mobile_menu .mobile_address .addres_addres .img_addres, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas, .wrap_mobile_menu .mobile_address .addres_addres .img_phone, .wrap_mobile_menu .mobile_address .addres_addres .img_mail {
+  display: flex;
+  margin-bottom: 15px;
+}
+.wrap_mobile_menu .mobile_address .addres_addres .img_addres a, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas a, .wrap_mobile_menu .mobile_address .addres_addres .img_phone a, .wrap_mobile_menu .mobile_address .addres_addres .img_mail a {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+.wrap_mobile_menu .mobile_address .addres_addres .img_addres img, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas img, .wrap_mobile_menu .mobile_address .addres_addres .img_phone img, .wrap_mobile_menu .mobile_address .addres_addres .img_mail img {
+  width: 15px;
+}
+.wrap_mobile_menu .mobile_address .addres_addres .img_addres .addres_text, .wrap_mobile_menu .mobile_address .addres_addres .img_addres .addres_laikas, .wrap_mobile_menu .mobile_address .addres_addres .img_addres .text_phone, .wrap_mobile_menu .mobile_address .addres_addres .img_addres .text_mail, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .addres_text, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .addres_laikas, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .text_phone, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .text_mail, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .addres_text, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .addres_laikas, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .text_phone, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .text_mail, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .addres_text, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .addres_laikas, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .text_phone, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .text_mail {
+  margin-left: 5%;
+}
+.wrap_mobile_menu .mobile_address .addres_addres .img_addres .addres_text p, .wrap_mobile_menu .mobile_address .addres_addres .img_addres .addres_laikas p, .wrap_mobile_menu .mobile_address .addres_addres .img_addres .text_phone p, .wrap_mobile_menu .mobile_address .addres_addres .img_addres .text_mail p, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .addres_text p, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .addres_laikas p, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .text_phone p, .wrap_mobile_menu .mobile_address .addres_addres .img_laikas .text_mail p, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .addres_text p, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .addres_laikas p, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .text_phone p, .wrap_mobile_menu .mobile_address .addres_addres .img_phone .text_mail p, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .addres_text p, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .addres_laikas p, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .text_phone p, .wrap_mobile_menu .mobile_address .addres_addres .img_mail .text_mail p {
+  font-size: 16px;
+}
+.menu_display_block {
+  display: block;
+  -webkit-animation: mobMenuAnimeOpen 0.5s;
+          animation: mobMenuAnimeOpen 0.5s;
 }
 
-.mobile_menu_button_down {
+@-webkit-keyframes mobMenuAnimeOpen {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes mobMenuAnimeOpen {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.mobile_menu_button_change {
   width: 40px;
   height: 40px;
   background-image: url(../img/header/times-solid_1.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  transition: 0.3s;
+  transition: 1.3s;
   transform: rotate(360deg);
 }
 
@@ -311,20 +355,13 @@ input[type=number] {
   min-width: 40%;
 }
 .page .wrap .wrap_grid .wrap_box .wrap_box1_image, .page .wrap .wrap_grid .wrap_box .wrap_box2_image, .page .wrap .wrap_grid .wrap_box .wrap_box3_image, .page .wrap .wrap_grid .wrap_box .wrap_box4_image {
-  background-image: url(/img/page/wrap_box1_image.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   max-width: 100%;
-  height: 200px;
+  height: auto;
 }
-.page .wrap .wrap_grid .wrap_box .wrap_box2_image {
-  background-image: url(/img/page/wrap_box1_image.jpg);
-}
-.page .wrap .wrap_grid .wrap_box .wrap_box3_image {
-  background-image: url(/img/page/wrap_box1_image.jpg);
-}
-.page .wrap .wrap_grid .wrap_box .wrap_box4_image {
-  background-image: url(/img/page/wrap_box1_image.jpg);
+.page .wrap .wrap_grid .wrap_box .wrap_box1_image img, .page .wrap .wrap_grid .wrap_box .wrap_box2_image img, .page .wrap .wrap_grid .wrap_box .wrap_box3_image img, .page .wrap .wrap_grid .wrap_box .wrap_box4_image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
 }
 .page .wrap .wrap_grid .wrap_box .wrap_box_title {
   text-align: center;
@@ -560,7 +597,7 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 
 .page5 {
-  height: 400px;
+  height: 700px;
   padding-bottom: 0;
   overflow-x: hidden;
 }
@@ -608,27 +645,25 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 .wrap_grid_page5 .slider_box .slider_box_item {
   width: 100%;
+  padding: 10px;
 }
 .wrap_grid_page5 .slider_box .slider_box_item .wrap_box5_image {
-  background-repeat: no-repeat;
-  background-size: cover;
   max-width: 150px;
   height: 150px;
   border-radius: 50%;
   margin: 0 auto;
 }
-.wrap_grid_page5 .slider_box .slider_box_item .image1 {
-  background-image: url("/img/feed/wrap_box1_image.jpg");
-}
-.wrap_grid_page5 .slider_box .slider_box_item .image2 {
-  background-image: url("/img/feed/wrap_box2_image.jpg");
+.wrap_grid_page5 .slider_box .slider_box_item .wrap_box5_image img {
+  width: 100px;
 }
 .wrap_grid_page5 .slider_box .slider_box_item .wrap_box_title p {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .wrap_grid_page5 .slider_box .slider_box_item .wrap_box_subtitle p {
-  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
 }
 
 .page6 {
@@ -649,8 +684,14 @@ input[type=range]::-webkit-slider-thumb:hover {
 .page6 .wrap .section .section_item .wrap_box_title {
   text-align: center;
 }
-.page6 .wrap .section .section_item .wrap_box_subtitle {
-  text-align: center;
+.page6 .wrap .section .section_item .wrap_box_title p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.page6 .wrap .section .section_item .wrap_box_subtitle p {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 200;
 }
 
 @-webkit-keyframes anislide {
@@ -724,9 +765,15 @@ input[type=range]::-webkit-slider-thumb:hover {
   border-bottom-style: solid;
   border-bottom-color: white;
 }
+.wrap_grid_page7 .item_contacts .item_contacts_fos .fos_inputs .spam {
+  opacity: 0;
+}
 .wrap_grid_page7 .item_contacts .item_contacts_fos .fos_inputs .message {
   height: 100px;
   resize: none;
+}
+.wrap_grid_page7 .item_contacts .item_contacts_fos .fos_inputs .agreement {
+  margin-top: 10px;
 }
 .wrap_grid_page7 .item_contacts .item_contacts_fos .fos_inputs .btn_fos {
   max-width: 180px;
@@ -738,8 +785,7 @@ input[type=range]::-webkit-slider-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin: 50px auto;
+  margin: 20px auto;
   transition: 0.5s;
 }
 .wrap_grid_page7 .item_contacts .item_contacts_fos .fos_inputs .btn_fos .btn_text {
@@ -752,28 +798,28 @@ input[type=range]::-webkit-slider-thumb:hover {
 .wrap_grid_page7 .item_contacts .item_contacts_fos .fos_inputs .result {
   color: red;
 }
-.wrap_grid_page7 .item_addres {
+.wrap_grid_page7 .item_addres, .wrap_grid_page7 .mobile_address {
   max-width: 100%;
   padding: 0 10px 0 10px;
 }
-.wrap_grid_page7 .item_addres .addres_addres .img_addres, .wrap_grid_page7 .item_addres .addres_addres .img_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_phone, .wrap_grid_page7 .item_addres .addres_addres .img_mail {
+.wrap_grid_page7 .item_addres .addres_addres .img_addres, .wrap_grid_page7 .item_addres .addres_addres .img_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_phone, .wrap_grid_page7 .item_addres .addres_addres .img_mail, .wrap_grid_page7 .mobile_address .addres_addres .img_addres, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas, .wrap_grid_page7 .mobile_address .addres_addres .img_phone, .wrap_grid_page7 .mobile_address .addres_addres .img_mail {
   display: flex;
   margin-bottom: 15px;
 }
-.wrap_grid_page7 .item_addres .addres_addres .img_addres a, .wrap_grid_page7 .item_addres .addres_addres .img_laikas a, .wrap_grid_page7 .item_addres .addres_addres .img_phone a, .wrap_grid_page7 .item_addres .addres_addres .img_mail a {
+.wrap_grid_page7 .item_addres .addres_addres .img_addres a, .wrap_grid_page7 .item_addres .addres_addres .img_laikas a, .wrap_grid_page7 .item_addres .addres_addres .img_phone a, .wrap_grid_page7 .item_addres .addres_addres .img_mail a, .wrap_grid_page7 .mobile_address .addres_addres .img_addres a, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas a, .wrap_grid_page7 .mobile_address .addres_addres .img_phone a, .wrap_grid_page7 .mobile_address .addres_addres .img_mail a {
   text-decoration: none;
   color: #FAFAFA;
 }
-.wrap_grid_page7 .item_addres .addres_addres .img_addres img, .wrap_grid_page7 .item_addres .addres_addres .img_laikas img, .wrap_grid_page7 .item_addres .addres_addres .img_phone img, .wrap_grid_page7 .item_addres .addres_addres .img_mail img {
+.wrap_grid_page7 .item_addres .addres_addres .img_addres img, .wrap_grid_page7 .item_addres .addres_addres .img_laikas img, .wrap_grid_page7 .item_addres .addres_addres .img_phone img, .wrap_grid_page7 .item_addres .addres_addres .img_mail img, .wrap_grid_page7 .mobile_address .addres_addres .img_addres img, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas img, .wrap_grid_page7 .mobile_address .addres_addres .img_phone img, .wrap_grid_page7 .mobile_address .addres_addres .img_mail img {
   width: 25px;
 }
-.wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_mail, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_mail, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_mail, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_mail {
+.wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_mail, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_mail, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_mail, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_text, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_laikas, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_phone, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_mail, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .addres_text, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .addres_laikas, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .text_phone, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .text_mail, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .addres_text, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .addres_laikas, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .text_phone, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .text_mail, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .addres_text, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .addres_laikas, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .text_phone, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .text_mail, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .addres_text, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .addres_laikas, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .text_phone, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .text_mail {
   margin-left: 5%;
 }
-.wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_mail p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_mail p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_mail p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_mail p {
+.wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_addres .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_addres .text_mail p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_laikas .text_mail p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_phone .text_mail p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_text p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .addres_laikas p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_phone p, .wrap_grid_page7 .item_addres .addres_addres .img_mail .text_mail p, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .addres_text p, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .addres_laikas p, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .text_phone p, .wrap_grid_page7 .mobile_address .addres_addres .img_addres .text_mail p, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .addres_text p, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .addres_laikas p, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .text_phone p, .wrap_grid_page7 .mobile_address .addres_addres .img_laikas .text_mail p, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .addres_text p, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .addres_laikas p, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .text_phone p, .wrap_grid_page7 .mobile_address .addres_addres .img_phone .text_mail p, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .addres_text p, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .addres_laikas p, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .text_phone p, .wrap_grid_page7 .mobile_address .addres_addres .img_mail .text_mail p {
   font-size: 20px;
 }
-.wrap_grid_page7 .item_addres .addres_addres .addres_dots div {
+.wrap_grid_page7 .item_addres .addres_addres .addres_dots div, .wrap_grid_page7 .mobile_address .addres_addres .addres_dots div {
   width: 15px;
   height: 15px;
   background-color: #E7AA7C;
@@ -782,10 +828,10 @@ input[type=range]::-webkit-slider-thumb:hover {
   margin-left: 10px;
   margin-bottom: 15px;
 }
-.wrap_grid_page7 .item_addres .addres_addres .addres_dots div:first-child {
+.wrap_grid_page7 .item_addres .addres_addres .addres_dots div:first-child, .wrap_grid_page7 .mobile_address .addres_addres .addres_dots div:first-child {
   margin-left: 10%;
 }
-.wrap_grid_page7 .item_addres .addres_addres .addres_dots div:nth-last-child(-n+2) {
+.wrap_grid_page7 .item_addres .addres_addres .addres_dots div:nth-last-child(-n+2), .wrap_grid_page7 .mobile_address .addres_addres .addres_dots div:nth-last-child(-n+2) {
   background-color: red;
 }
 

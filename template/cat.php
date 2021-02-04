@@ -33,8 +33,8 @@ for($i = 0; $i < count($result); $i++){
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<title>Gutalinas</title>
+	
+	<title>Avalynės taisykla Gutalinas</title>
 	<meta name="description" content="Batų taisymas, batų priežiūra, batų dažymas, peilių galandimas, odos tvarkymas">
 			
 	
@@ -52,6 +52,7 @@ for($i = 0; $i < count($result); $i++){
 
 </head>
 <body>	
+	<div  id="Aukštyn"></div>
 <?php include"header_second.php";?>	
 
 <!-- ======================== -->

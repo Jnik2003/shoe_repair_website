@@ -1,6 +1,7 @@
 
 let sliders = document.querySelectorAll('.slider_box');
 
+
 let countslide = 0;
 
 
@@ -34,7 +35,7 @@ for(let i =0 ; i < sliders.length; i++){
 }
 let divDots5 = document.querySelectorAll('.dot5');
 divDots5[0].style.backgroundColor = '#95633E';
-sliders[countslide].style.opacity = "1";
+sliders[sliders.length-1].style.opacity = "0";
 
 function plus(){
 	divDots5[countslide].style.backgroundColor = '#D2D2D2';
@@ -92,7 +93,7 @@ function minus(){
 	}	
 }
 
-let timerId = setInterval(() => autoplus(), 15000);
+let timerId = setInterval(() => autoplus(), 10000);
 
 function autoplus(){
 	divDots5[countslide].style.backgroundColor = '#D2D2D2';

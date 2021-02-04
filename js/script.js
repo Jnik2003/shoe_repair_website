@@ -22,12 +22,16 @@ function menuOnTop(){
 let hamb = document.querySelector('.hamburger');
 let wmm = document.querySelector('.wrap_mobile_menu');
 let mmb = document.querySelector('.mobile_menu_button');
+
+let menuBoxes = document.querySelectorAll('.menu_box');
 hamb.addEventListener('click', openMobMenu);
 
+
 function openMobMenu(){
-	wmm.classList.toggle('menu_visible');
-	mmb.classList.toggle('mobile_menu_button_down');	
-	wmm.style.transition = ".3s";
+	//wmm.classList.toggle('menu_visible');
+	mmb.classList.toggle('mobile_menu_button_change');	
+	//wmm.style.transition = "2.3s";	
+	wmm.classList.toggle('menu_display_block');
 // для информации
 // стили 
 // .menu_visible{
@@ -47,6 +51,10 @@ function openMobMenu(){
 // 	transform: rotate(360deg);
 // }
 }
+
+// закрыть меню росле тыка
+menuBoxes.forEach(function(item) {item.addEventListener('click', openMobMenu)});
+
 
 //=======BeforeAfter===========page3
 
@@ -89,6 +97,15 @@ if(wrap3){
 	box.makediv('url(img/slider/1.jpg)', 'url(img/slider/2.jpg)');	
 	box.makediv('url(img/slider/3.jpg)', 'url(img/slider/4.jpg)');
 	box.makediv('url(img/slider/5.jpg)', 'url(img/slider/6.jpg)');
+	box.makediv('url(img/slider/7.jpg)', 'url(img/slider/8.jpg)');	
+	box.makediv('url(img/slider/9.jpg)', 'url(img/slider/10.jpg)');
+	box.makediv('url(img/slider/11.jpg)', 'url(img/slider/12.jpg)');
+	box.makediv('url(img/slider/13.jpg)', 'url(img/slider/14.jpg)');	
+	box.makediv('url(img/slider/15.jpg)', 'url(img/slider/16.jpg)');
+	box.makediv('url(img/slider/17.jpg)', 'url(img/slider/18.jpg)');
+	box.makediv('url(img/slider/19.jpg)', 'url(img/slider/20.jpg)');	
+
+	
 
 
 
@@ -228,6 +245,8 @@ let mail = document.querySelector('.mail');
 let message = document.querySelector('.message');
 let btnfos = document.querySelector('.btn_fos');
 let result = document.querySelector('.result');
+let agree = document.querySelector('.agree');
+let spam = document.querySelector('.spam');
 
 if(btnfos){	
 
@@ -239,7 +258,21 @@ function fSend(){
 sendArr[0] = name.value;
 sendArr[1] = mail.value;
 sendArr[2] = message.value;
-//console.log(sendArr);
+if(agree.checked){
+	agree.value = "yes";	
+}else{
+	agree.value = "no";
+}
+sendArr[3] = agree.value;
+
+if(spam.checked){
+	spam.value = "spam";	
+}
+
+sendArr[4] = spam.value;
+
+
+
 	
 	fetch('core/mail.php', {
 			method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -259,17 +292,51 @@ sendArr[2] = message.value;
 		.then(function(response){
 			console.log(response);
 			result.innerHTML = response;
+			
+			let clear = document.querySelector('.clear');
+			if(clear.innerHTML == 'Žinutė išsiųsta'){
+				clearForm();
+			}
+			if(clear.innerHTML == 'spam'){
+				sendToPhp();
+				clearForm();
+			}
+
+			
 		})	
 }
+
+function sendToPhp(){
+	clear = document.querySelector('.clear');
+	fetch('core/spam_to_sql.php', {
+			method: 'POST', // *GET, POST, PUT, DELETE, etc.
+   			headers: {
+      		//'Content-Type': 'application/json'
+      		'Content-Type': 'application/x-www-form-urlencoded',
+    		},
+  			  
+   			 body: "spam=" + clear.innerHTML, // body data type must match "Content-Type" header
+   			 //body: JSON.stringify(sendArr),
+   			 //body: JSON.stringify(sendArr),
+		})
+		.then(function(response){
+			return response.text();
+			//return response.json();
+		})
+		.then(function(response){
+			console.log(response);
+			result.innerHTML = response;			
+})
+	}
 
 // анимация дня недели
 let date = new Date();
 let day;
 //let day = date.getDay();
-console.log(date.getDay());
+//console.log(date.getDay());
 
 let hour = date.getHours();
-console.log(hour);
+//console.log(hour);
 
 if(date.getDay() == 0){
 	day = 6;
@@ -291,26 +358,32 @@ else{
 }
 
 }
-// очистка формы после нажатия кнопки отправить
-let btn_fos = document.querySelector('.btn_fos');
-if(btn_fos){
+//очистка формы после нажатия кнопки отправить
 
-btn_fos.addEventListener('click', clearForm);
+// let btn_fos = document.querySelector('.btn_fos');
+//let send = "<?php '"$send'"; ?>";
+console.log(result.innerHTML);
 
-
-
-function clearForm(){
+// if(btn_fos){
+// btn_fos.addEventListener('click', clearForm);
+function clearForm(){	
+	
 	let name = document.querySelector('.name');
 	let mail = document.querySelector('.mail');
 	let message = document.querySelector('.message');
+	let agree = document.querySelector('.agree');
+	let spam = document.querySelector('.spam');
 
 	name.value = '';
 	mail.value = '';
 	message.value = '';	
-
+	agree.checked = false;
+	spam.checked = false;
 }
+//}
 
-}
+
+
 // вывод на страницу gallery по 20 фото
 let gallery_img = document.querySelectorAll('.gallery_img');
 let count_img = 20; // по сколько будем открывать фоток
@@ -370,3 +443,10 @@ function openFoto(){
 	
 }
 }
+
+
+
+
+//document.querySelector("#Kontaktai > div > div.wrap_grid_page7 > div.page7_items.item_map")
+
+
